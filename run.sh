@@ -28,5 +28,6 @@ then
     fail "$RES"
 else
     info "app is avalible at https://appetize.io/app/$APPETIZE_KEY"
-    export WERCKER_APPETIZE_APPKEY=$APPETIZE_KEY
+    #export WERCKER_APPETIZE_APPKEY=$APPETIZE_KEY
+    cat $APPETIZE_KEY > .appetize_appkey
 fi

@@ -1,5 +1,5 @@
 name: appetize
-version: 0.0.7
+version: 0.0.8
 description: Upload an app to [Appetize](https://appetize.io) as part of the build process
 keywords:
   - appetize

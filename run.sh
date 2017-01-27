@@ -1,0 +1,30 @@
+#!/bin/bash
+set +e
+
+if [ -z "$WERCKER_APPETIZE_TOKEN" ]
+then
+    fail "missing token"
+fi
+
+if [ -z "$WERCKER_APPETIZE_PATH" ]
+then
+    fail "missing path to app"
+fi
+
+if [ -z "$WERCKER_APPETIZE_PLATFORM" ]
+then
+    fail "missing platform type"
+fi
+
+
+RES=$(curl https://$WERCKER_APPETIZE_TOKEN@api.appetize.io/v1/apps \
+    -v -F "file=@$WERCKER_APPETIZE_PLATH" -F "platform=$WERCKER_APPETIZE_PLATFORM")
+
+APPETIZE_KEY=`echo $RES | grep -Po '(?<="publicKey":")(.*?)(?=",)'`
+if [[ -z $APPETIZE_KEY ]]
+then
+    fail $RES
+else
+    info "app is avalible at https://appetize.io/app/$APPETIZE_KEY"
+    export $APPETIZE_KEY
+fi

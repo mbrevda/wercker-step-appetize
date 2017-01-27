@@ -1,0 +1,19 @@
+name: appetize
+version: 0.0.1
+description: Upload an app to [Appetize](https://appetize.io) as part of the build process
+keywords:
+  - appetize
+  - android
+  - ios
+  - emulator
+  - build preview
+properties:
+  token:
+    type: string
+    required: true
+  path:
+    type: string
+    required: true
+  platform:
+    type: string
+    required: true

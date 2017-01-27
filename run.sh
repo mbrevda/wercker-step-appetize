@@ -28,5 +28,5 @@ then
     fail "$RES"
 else
     info "app is avalible at https://appetize.io/app/$APPETIZE_KEY"
-    export $APPETIZE_KEY
+    export APPETIZE_KEY
 fi

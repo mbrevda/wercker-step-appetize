@@ -7,6 +7,9 @@ Upload an app to [Appetize](https://appetize.io) for instant streaming build pre
 * `path`: (required) The path to built application
 * `platform`: `ios` or `android`
 
+# Usage
+Use this step as you would any other. After running, the step will print the url to see the app preview. After uploading, the environmental variable `APPETIZE_APPKEY` will be set to the Appetize `publicKey`. Additionally, the key will be saved to `.appetize_appkey` for usage in other pipelines.
+
 # Example
 ```yml
 box: node

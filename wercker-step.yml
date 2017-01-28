@@ -1,6 +1,6 @@
 name: appetize
-version: 0.0.9
-description: Upload an app to [Appetize](https://appetize.io) as part of the build process
+version: 0.0.10
+description: Upload an app to [Appetize](https://appetize.io) as part of the build process. Useful for deploy previews of android/ios apps
 keywords:
   - appetize
   - android
